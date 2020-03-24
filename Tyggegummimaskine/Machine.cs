@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Tyggegummimaskine
 {
+    //HVOR ER DIN KODEKOMMENTAR
+    
+    //Hvorfor sealed?
     public sealed 
         
         
@@ -14,6 +17,7 @@ namespace Tyggegummimaskine
         private static Machine instance = null;
         private static readonly object padlock = new object();
 
+            //Denne skal angives som private...ellers kan alle klasser der ligger i samme namespace også bruge konstruktøren og instantiere
         Machine()
         {
         }
@@ -72,6 +76,8 @@ namespace Tyggegummimaskine
                 bubblegumsgreen[i] = new Bubblegum("Green");
             }
         }
+            
+            //Hvorfor får det stakkels barn aldrig sit tyggegummi, i stedet får han bare en lille seddel med en besked om at han får et tyggegummi
         public string Dispense()
         {
             Random random = new Random();
